@@ -4,7 +4,9 @@
   "description": "Use W3C CSS Level 4 Modules Today",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "lint": "eslint . --ignore-path .gitignore",
+    "fixtures": "tape test/*.js | tap-spec",
+    "test": "npm run lint && npm run fixtures"
   },
   "repository": {
     "type": "git",
@@ -12,14 +14,52 @@
   },
   "keywords": [
     "postcss",
+    "postcss-plugin",
     "w3c",
+    "css",
     "css4",
-    "csswg"
+    "csswg",
+    "color-function",
+    "color-gray",
+    "color-hex-alpha",
+    "color-hwb",
+    "color-rebeccapurple",
+    "custom-media",
+    "custom-properties",
+    "custom-selectors",
+    "font-variant",
+    "media-minmax",
+    "any-link",
+    "matches",
+    "not",
+    "selector",
+    "pseudo-class"
   ],
   "author": "Stephen Way <stephen@stephenway.net> (http://stephenway.net)",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/stephenway/level4/issues"
   },
-  "homepage": "https://github.com/stephenway/level4#readme"
+  "homepage": "https://github.com/stephenway/level4#readme",
+  "dependencies": {
+    "postcss": "^5.0.10",
+    "postcss-color-function": "^2.0.0",
+    "postcss-color-gray": "^3.0.0",
+    "postcss-color-hex-alpha": "^2.0.0",
+    "postcss-color-hwb": "^2.0.0",
+    "postcss-color-rebeccapurple": "^2.0.0",
+    "postcss-custom-media": "^5.0.0",
+    "postcss-custom-properties": "^5.0.0",
+    "postcss-custom-selectors": "^3.0.0",
+    "postcss-font-variant": "^2.0.0",
+    "postcss-media-minmax": "^2.1.0",
+    "postcss-pseudo-class-any-link": "^1.0.0",
+    "postcss-selector-matches": "^2.0.1",
+    "postcss-selector-not": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^1.8.0",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.2"
+  }
 }
