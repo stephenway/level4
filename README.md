@@ -62,6 +62,17 @@ write some beautiful media queries.
 
 ## Custom Selectors
 
+Define reusable custom selectors.
+
+```css
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+
+:--headings + p { ... }
+
+/* compiles to */
+
+h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p { ... }
+```
 
 ## Color Function
 
@@ -104,20 +115,18 @@ A collection of plugins that power level4 with reference to the drafts they
 support..
 
 * [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties) for [css-variables](http://www.w3.org/TR/css-variables/)
-* [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
-* [postcss-custom-selectors](https://github.com/postcss/postcss-custom-selectors)
-* [postcss-color-function](https://github.com/postcss/postcss-color-function)
-* [postcss-color-gray](https://github.com/postcss/postcss-color-gray)
-* [postcss-color-hex-alpha](https://github.com/postcss/postcss-color-hex-alpha)
-* [postcss-color-hwb](https://github.com/postcss/postcss-color-hwb)
-* [postcss-font-variant](https://github.com/postcss/postcss-font-variant)
-* [postcss-selector-matches](https://github.com/postcss/postcss-selector-matches)
-* [postcss-selector-not](https://github.com/postcss/postcss-selector-not)
-* [postcss-pseudo-class-any-link](https://github.com/jonathantneal/postcss-pseudo-class-any-link)
-* [postcss-color-rebeccapurple](https://github.com/postcss/postcss-color-rebeccapurple)
-* [postcss-color-rgba-fallback](https://github.com/postcss/postcss-color-rgba-fallback)
-* [postcss-media-minmax](https://github.com/postcss/postcss-media-minmax) for
-  [mediaqueries/mq-min-max](https://drafts.csswg.org/mediaqueries/#mq-min-max)
+* [postcss-custom-media](https://github.com/postcss/postcss-custom-media) for [mediaqueries/custom-mq](https://drafts.csswg.org/mediaqueries/#custom-mq)
+* [postcss-custom-selectors](https://github.com/postcss/postcss-custom-selectors) for [css-extensions/custom-selectors](https://drafts.csswg.org/css-extensions/#custom-selectors)
+* [postcss-color-function](https://github.com/postcss/postcss-color-function) for [css-color/modifying-colors](https://drafts.csswg.org/css-color/#modifying-colors)
+* [postcss-color-gray](https://github.com/postcss/postcss-color-gray) for [css-color/grays](https://drafts.csswg.org/css-color/#grays)
+* [postcss-color-hex-alpha](https://github.com/postcss/postcss-color-hex-alpha) for [css-color/hex-notation](https://drafts.csswg.org/css-color/#hex-notation)
+* [postcss-color-hwb](https://github.com/postcss/postcss-color-hwb) for [css-color/the-hwb-notation](https://drafts.csswg.org/css-color/#the-hwb-notation)
+* [postcss-font-variant](https://github.com/postcss/postcss-font-variant) for [css-fonts/propdef-font-variant](https://drafts.csswg.org/css-fonts/#propdef-font-variant)
+* [postcss-selector-matches](https://github.com/postcss/postcss-selector-matches) for [selectors-4/matches](https://drafts.csswg.org/selectors-4/#matches)
+* [postcss-selector-not](https://github.com/postcss/postcss-selector-not) for [selectors-4/negation](https://drafts.csswg.org/selectors-4/#negation)
+* [postcss-pseudo-class-any-link](https://github.com/jonathantneal/postcss-pseudo-class-any-link) for [selectors4/the-any-link-pseudo](http://www.w3.org/TR/selectors4/#the-any-link-pseudo)
+* [postcss-color-rebeccapurple](https://github.com/postcss/postcss-color-rebeccapurple) for [css-color/valdef-color-rebeccapurple](https://drafts.csswg.org/css-color/#valdef-color-rebeccapurple)
+* [postcss-media-minmax](https://github.com/postcss/postcss-media-minmax) for [mediaqueries/mq-min-max](https://drafts.csswg.org/mediaqueries/#mq-min-max)
 
 ## Contributing
 

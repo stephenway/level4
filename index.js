@@ -62,11 +62,6 @@ var processors = [
     defaults: {}
   },
   {
-    plugin: require('postcss-color-rgba-fallback'),
-    namespace: 'rgba',
-    defaults: {}
-  },
-  {
     plugin: require('postcss-media-minmax'),
     namespace: 'mediaMinmax',
     defaults: {}
