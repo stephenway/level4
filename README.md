@@ -1,4 +1,8 @@
-# level4
+# level4 [![Travis Build Status][travis-img]][travis]
+
+<img src="giticon.png" title="level4" align="right" width="95"
+height="95">
+
 Use W3C CSS Level 4 Modules Today with PostCSS. Take advantage of future
 techniques like variables, custom selectors, color functions, and new pseudo
 selectors.
