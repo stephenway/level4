@@ -2,6 +2,16 @@ var postcss = require('postcss');
 
 var processors = [
   {
+    plugin: require('postcss-nesting'),
+    namespace: 'nesting',
+    defaults: {}
+  },
+  {
+    plugin: require('postcss-nested'),
+    namespace: 'nested',
+    defaults: {}
+  },
+  {
     plugin: require('postcss-custom-properties'),
     namespace: 'properties',
     defaults: {}

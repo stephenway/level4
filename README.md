@@ -225,6 +225,39 @@ Transform `>=`/`<=` operators into working `min-`/`max-` prefixes.
 @media screen and (min-width: 10em) and (max-width: 40em) { ... }
 ```
 
+## Nesting
+
+You are able to write both types of nesting with this feature.
+
+```css
+div {
+  color blue;
+
+  & div {
+    color: green;
+  }
+
+  @nest body & {
+    color: yellow;
+  }
+}
+
+/* compiles to */
+
+div {
+  color: blue;
+}
+
+div div {
+  color: green;
+}
+
+body div {
+  color: yellow;
+}
+```
+
+
 You can also combine this with [custom-media](#custom-media).
 
 ## Plugins
@@ -244,6 +277,8 @@ support..
 * [postcss-pseudo-class-any-link](https://github.com/jonathantneal/postcss-pseudo-class-any-link) for [selectors4/the-any-link-pseudo](http://www.w3.org/TR/selectors4/#the-any-link-pseudo)
 * [postcss-color-rebeccapurple](https://github.com/postcss/postcss-color-rebeccapurple) for [css-color/valdef-color-rebeccapurple](https://drafts.csswg.org/css-color/#valdef-color-rebeccapurple)
 * [postcss-media-minmax](https://github.com/postcss/postcss-media-minmax) for [mediaqueries/mq-min-max](https://drafts.csswg.org/mediaqueries/#mq-min-max)
+* [postcss-nested](https://github.com/postcss/postcss-nested) for [css-nesting](http://tabatkins.github.io/specs/css-nesting/)
+* [postcss-nesting](https://github.com/jonathantneal/postcss-nesting) for [css-nesting](http://tabatkins.github.io/specs/css-nesting/)
 
 ## Contributing
 
