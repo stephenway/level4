@@ -76,26 +76,138 @@ h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p { ... }
 
 ## Color Function
 
+Transform color values at will. See everything you can do with this in
+[interface](https://github.com/postcss/postcss-color-function#interface-according-to-css-specs)
+
+```css
+div {
+  color: color(green a(90%));
+}
+
+/* compiles to */
+
+div {
+  color: rgba(0, 255, 0, .9);
+}
+```
 
 ## Color `gray()`
 
+Transform `gray()` function to `rgba()` equivalent.
+
+```css
+div {
+  background: gray(255, 50%);
+  color: gray(0);
+}
+
+/* compiles to */
+
+div {
+  background: rgba(255, 255, 255, .5);
+  color: rgb(0, 0, 0);
+}
+```
 
 ## Color Hex Alpha
 
+Transform `#RRGGBBAA` or `#RGBA` to `rgba()`.
+
+```css
+div {
+  background: #9823f834;
+  color: #9d9c;
+}
+
+/* compiles to */
+
+div {
+  background: rgba(152, 35, 248, .20392);
+  color: rgba(153, 221, 153, .8);
+}
+```
 
 ## Color `hwb()`
+
+Transform `hwb()` colors to `rgba()`.
+
+```css
+div {
+  background: hwb(90, 0%, 0%, .5);
+  color: hwb(190, 50%, 0%);
+}
+
+/* compiles to */
+
+div {
+  background: rgba(128, 255, 0, .5);
+  color: rgb(128, 234, 255);
+}
+```
 
 
 ## Font Variant
 
+Transforms `font-variant-*` property to the more supported
+`font-feature-settings`.
+
+```css
+h1 {
+  font-variant-caps: small-caps;
+}
+
+table {
+  font-variant-numeric: lining-nums;
+}
+
+/* compiles to */
+
+h1 {
+  font-feature-settings: "c2sc";
+  font-variant-caps: small-caps;
+}
+
+table {
+  font-feature-settings: "lnum";
+  font-variant-numeric: lining-nums;
+}
+```
 
 ## `:matches()`
 
+Simplifies `:matches()` pseudo selectors.
+
+```css
+li:matches(:last-child, .fancy) { ... }
+
+/* compiles to */
+
+li:last-child, li.fancy { ... }
+```
 
 ## `:not()`
 
+Transforms level 4 `:not()` to a level 3 selector.
+
+```css
+li:not(:last-child, .fancy) { ... }
+
+/* compiles to */
+
+li:not(:last-child), li:not(.fancy) { ... }
+```
 
 ## `:any-link`
+
+Transforms `:any-link` to `:link` and `:visited`.
+
+```css
+a:any-link { ... }
+
+/* compiles to */
+
+a:link, a:visited { ... }
+```
 
 ## Media Minmax
 Transform `>=`/`<=` operators into working `min-`/`max-` prefixes.
