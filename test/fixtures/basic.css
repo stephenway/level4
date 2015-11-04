@@ -1,0 +1,65 @@
+:root {
+  --color: green;
+}
+
+div {
+  color: var(--color);
+}
+
+@custom-media --name (width >= 10em) and (width <= 40em);
+
+@media (--name) {
+  color: green;
+}
+
+@custom-selector :--headings h1, h2, h3, h4, h5, h6;
+
+:--headings + p {
+  color: green;
+}
+
+div {
+  color: color(green a(90%));
+}
+
+div {
+  background: gray(255, 50%);
+  color: gray(0);
+}
+
+div {
+  background: #9823f834;
+  color: #9d9c;
+}
+
+div {
+  background: hwb(90, 0%, 0%, .5);
+  color: hwb(190, 50%, 0%);
+}
+
+h1 {
+  font-variant-caps: small-caps;
+}
+
+table {
+  font-variant-numeric: lining-nums;
+}
+
+li:matches(:last-child, .fancy) {
+  color: green;
+}
+
+li:not(:last-child, .fancy) {
+  color: green;
+}
+
+a:any-link {
+  color: green;
+}
+
+@media screen and (width >= 10em) and (width <= 40em) {
+  div {
+    color: green;
+  }
+}
+

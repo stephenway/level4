@@ -2,19 +2,6 @@ var tests = {
   'level4': {
     'basic': {
       message: 'supports basic usage'
-    },
-    'basic:var': {
-      message: 'supports basic usage with variables',
-      options: {
-        variables: {
-          variables: {
-            pass: 'blue'
-          }
-        }
-      }
-    },
-    'mixed': {
-      message: 'supports mixed usage'
     }
   }
 };

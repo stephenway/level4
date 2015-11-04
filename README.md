@@ -71,7 +71,12 @@ Define reusable custom selectors.
 
 /* compiles to */
 
-h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p { ... }
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p { ... }
 ```
 
 ## Color Function
@@ -87,7 +92,7 @@ div {
 /* compiles to */
 
 div {
-  color: rgba(0, 255, 0, .9);
+  color: rgba(0, 128, 0, 0.9);
 }
 ```
 
@@ -104,7 +109,7 @@ div {
 /* compiles to */
 
 div {
-  background: rgba(255, 255, 255, .5);
+  background: rgba(255, 255, 255, 0.5);
   color: rgb(0, 0, 0);
 }
 ```
@@ -122,8 +127,8 @@ div {
 /* compiles to */
 
 div {
-  background: rgba(152, 35, 248, .20392);
-  color: rgba(153, 221, 153, .8);
+  background: rgba(152, 35, 248, 0.20392);
+  color: rgba(153, 221, 153, 0.8);
 }
 ```
 
@@ -140,7 +145,7 @@ div {
 /* compiles to */
 
 div {
-  background: rgba(128, 255, 0, .5);
+  background: rgba(128, 255, 0, 0.5);
   color: rgb(128, 234, 255);
 }
 ```
@@ -194,7 +199,7 @@ li:not(:last-child, .fancy) { ... }
 
 /* compiles to */
 
-li:not(:last-child), li:not(.fancy) { ... }
+li:not(:last-child):not(.fancy) { ... }
 ```
 
 ## `:any-link`
@@ -206,7 +211,7 @@ a:any-link { ... }
 
 /* compiles to */
 
-a:link, a:visited { ... }
+a:link,a:visited { ... }
 ```
 
 ## Media Minmax
