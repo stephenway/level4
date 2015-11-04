@@ -43,6 +43,18 @@ div {
 
 ## Custom Media
 
+Define reusable media queries. Used with [media minmax](#media-minmax) you can
+write some beautiful media queries.
+
+```css
+@custom-media --name (width >= 10em) and (width <= 40em);
+
+@media (--name) { ... }
+
+/* compiles to */
+
+@media screen and (min-width: 10em) and (max-width: 40em) { ... }
+```
 
 ## Custom Selectors
 
@@ -81,17 +93,7 @@ Transform `>=`/`<=` operators into working `min-`/`max-` prefixes.
 @media screen and (min-width: 10em) and (max-width: 40em) { ... }
 ```
 
-You can also combine this with custom-media.
-
-```css
-@custom-media --name (width >= 10em) and (width <= 40em);
-
-@media (--name) { ... }
-
-/* compiles to */
-
-@media screen and (min-width: 10em) and (max-width: 40em) { ... }
-```
+You can also combine this with [custom-media](#custom-media).
 
 ## Plugins
 A collection of plugins that power level4 with reference to the drafts they
