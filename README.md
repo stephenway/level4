@@ -22,8 +22,55 @@ var output = postcss()
   .css;
 ```
 
-## Media Minmax
+## Custom Properties
+Transform `var()` functions to compatible values.
 
+```css
+:root {
+  --color: green;
+}
+
+div {
+  color: var(--color);
+}
+
+/* compiles to */
+
+div {
+  color: green;
+}
+```
+
+## Custom Media
+
+
+## Custom Selectors
+
+
+## Color Function
+
+
+## Color `gray()`
+
+
+## Color Hex Alpha
+
+
+## Color `hwb()`
+
+
+## Font Variant
+
+
+## `:matches()`
+
+
+## `:not()`
+
+
+## `:any-link`
+
+## Media Minmax
 Transform `>=`/`<=` operators into working `min-`/`max-` prefixes.
 
 ```css
@@ -47,10 +94,10 @@ You can also combine this with custom-media.
 ```
 
 ## Plugins
+A collection of plugins that power level4 with reference to the drafts they
+support..
 
-A collection of plugins that power level4.
-
-* [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties)
+* [postcss-custom-properties](https://github.com/postcss/postcss-custom-properties) for [css-variables](http://www.w3.org/TR/css-variables/)
 * [postcss-custom-media](https://github.com/postcss/postcss-custom-media)
 * [postcss-custom-selectors](https://github.com/postcss/postcss-custom-selectors)
 * [postcss-color-function](https://github.com/postcss/postcss-color-function)
@@ -63,7 +110,8 @@ A collection of plugins that power level4.
 * [postcss-pseudo-class-any-link](https://github.com/jonathantneal/postcss-pseudo-class-any-link)
 * [postcss-color-rebeccapurple](https://github.com/postcss/postcss-color-rebeccapurple)
 * [postcss-color-rgba-fallback](https://github.com/postcss/postcss-color-rgba-fallback)
-* [postcss-media-minmax](https://github.com/postcss/postcss-media-minmax)
+* [postcss-media-minmax](https://github.com/postcss/postcss-media-minmax) for
+  [mediaqueries/mq-min-max](https://drafts.csswg.org/mediaqueries/#mq-min-max)
 
 ## Contributing
 
