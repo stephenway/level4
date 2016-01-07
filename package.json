@@ -54,13 +54,13 @@
     "postcss-font-variant": "^2.0.0",
     "postcss-media-minmax": "^2.1.0",
     "postcss-nested": "^1.0.0",
-    "postcss-nesting": "^2.0.6",
+    "postcss-nesting": "^2.1.0",
     "postcss-pseudo-class-any-link": "^1.0.0",
     "postcss-selector-matches": "^2.0.1",
     "postcss-selector-not": "^2.0.0"
   },
   "devDependencies": {
-    "eslint": "^1.8.0",
+    "eslint": "^1.10.0",
     "tap-spec": "^4.1.0",
     "tape": "^4.2.2"
   }
